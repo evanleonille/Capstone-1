@@ -24,29 +24,102 @@
 
 
   <div class="sidebar ">
-      <a class="navbar btn btn-info "  href="#">
+    <!-- Dashboard -->
+      <a class="navbar btn btn-info"  href="Dboard.html">
         <i class="icon fa-solid fa-chart-line"></i>
       </a>
       <br>
-      <a class="navbar btn btn-info" href="#">
+      <!-- Orphan -->
+      <a class="navbar btn btn-info" href="Orphan.html">
         <i class="icon fa-solid fa-children" ></i>
       </a>
       <br>
-      <a class="navbar btn btn-info" href="#">
+      <!-- Files -->
+      <a class="navbar btn btn-info" href="File.html">
         <i class="icon fa-solid fa-folder-open"></i>
       </a>
       <br>
-      <a class="navbar btn btn-info" href="#">
+      <!-- Trash -->
+      <a class="navbar btn btn-info" href="Trash.html">
         <i class="icon fa-solid fa-trash-can"></i>
       </a>
       <br>
-      <a class="navbar btn btn-info" href="#">
+      <!-- Setting -->
+      <a class="navbar btn btn-info" href="Setting.html">
         <i class="icon fa-solid fa-gears"></i>
       </a>
       <br>
-      <a class="navbar btn btn-info" href="#">
+      <!-- Logout -->
+      <a class="navbar btn btn-info" href="Logout.html">
         <i class="icon fa-solid fa-right-from-bracket"></i>
       </a>
   </div>
 
 </div>
+
+<div>
+    <div class="container-fluid">
+        <div class="container-orphan">
+            <div class="file-manager">
+            <div class="file">
+                <div class="dropdown-container">
+                    <a class="icon-dropdown dropdown-button btn" id="myButton">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </a>
+                      <div class="dropdown-content" id="myDropdown">
+                        <a class="dropdown-item" href="notes.html">notes</a>
+                        <a class="dropdown-item" href="#">Item 2</a>
+                        <a class="dropdown-item" href="#">Item 3</a>
+                      </div>
+                  <img class="file-icon" src="..\ProfilePic\Profpic (7).png" alt="File Icon">
+                  <div class="file-name">File 1.txt</div>
+                  </div>
+            </div>
+            <div class="file">
+                <div class="dropdown-container">
+                    <a class="icon-dropdown dropdown-button btn" id="myButton">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </a>
+                      <div class="dropdown-content" id="myDropdown">
+                        <a class="dropdown-item" href="notes.html">notes</a>
+                        <a class="dropdown-item" href="#">Item 2</a>
+                        <a class="dropdown-item" href="#">Item 3</a>
+                      </div>
+                  <img class="file-icon" src="..\ProfilePic\Profpic (8).png" alt="File Icon">
+                  <div class="file-name">File 1.txt</div>
+                  </div>
+            </div>
+            <div class="file">
+                <div class="dropdown-container">
+                    <a class="icon-dropdown dropdown-button btn" id="myButton">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </a>
+                      <div class="dropdown-content" id="myDropdown">
+                        <a class="dropdown-item" href="notes.html">notes</a>
+                        <a class="dropdown-item" href="#">notes</a>
+                        <a class="dropdown-item" href="#">Item 3</a>
+                      </div>
+                  <img class="file-icon" src="..\ProfilePic\Profpic (9).png" alt="File Icon">
+                  <div class="file-name">File 1.txt</div>
+                  </div>
+            </div>
+            <!-- More file items can be added here -->
+            </div>
+            <div class="crud-buttons">
+              <button>Add</button> 
+              <button>Delete</button>  
+              <button>Edit</button>
+            </div>
+            <div class="page-buttonsR">
+              <button>previous</button>   
+            </div>
+            <div class="page-buttonsL">
+              <button>next</button>   
+            </div> 
+        </div>
+    </div>
+</div>
+
+<script src="..\Js\file-dropdown.js"></script>
+</body>
+</html>
