@@ -1,0 +1,63 @@
+.row{
+    background-color: rgb(134, 134, 224);
+}
+
+
+.sbar{
+    display: flex;
+    width: 30%;
+    padding-top: 10px;
+    position: absolute;
+    align-items: end;
+    left: 40%;
+    /* border: 1px solid black; */
+}
+.form-control{
+    width: 70%;
+    height: 5%;
+    padding: 5px;
+    /* border: 1px solid red; */
+}
+
+.container-fluid{
+    align-items: center;
+}
+.sidebar{
+    padding-top: 10%;
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    /* border: 1px solid blue; */
+    background-color: rgb(190, 255, 233);
+}
+
+.navbar{
+    width: 50px;
+    padding: 5px;
+    border: 1px red;
+    position: relative;
+    left: 25px;
+    padding: 5px;
+    background-color: rgb(190, 255, 233);
+}
+
+/* -------------------bar chart---------- */
+.conatiner{
+    width: 70%;
+}
+
+.chart{
+    position: relative;
+    max-width: 50%;
+    max-height: 200px;
+    display: flex;
+    top: 100px;
+    left: 100px;
+    /* border: 1px solid black; */
+    margin-bottom: 10px;
+}
+
+/* -----------------Icon size */
+.icon{
+    font-size: 33px;
+}
