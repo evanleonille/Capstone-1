@@ -10,17 +10,19 @@
     <title>Document</title>
 </head>
 <body>
-    
-  <div class="sbar" >
-    <nav class=" bg-body-tertiary">
-      <div class="container-fluid">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-  </div>
+  
+
+
+  <div class="sbar mt-5">
+    <div class="row-search ">
+        <div class="col-6">
+            <div class="input-size input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search...">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
   <div class="sidebar ">
@@ -55,9 +57,9 @@
       </a>
   </div>
 
-</div>
 
-<div class="container-fluid">
+
+<div class="container-fluid-charts">
     <canvas class="chart" id="barChart" width="200" height="50"></canvas>
     <canvas class="chart" id="pieChart" width="10" height="20"></canvas>
 

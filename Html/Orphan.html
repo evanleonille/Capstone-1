@@ -6,102 +6,198 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="..\Css\styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/d050a6d764.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     
-  <div class="sbar" >
-    <nav class=" bg-body-tertiary">
-      <div class="container-fluid">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-  </div>
+  <div class="sbar mt-5">
+    <div class="row-search ">
+        <div class="col-6">
+            <div class="input-size input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search...">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
   <div class="sidebar ">
     <!-- Dashboard -->
-      <a class="navbar btn btn-info"  href="Dboard.html">
+      <a class="navbar btn btn-outline-dark"  href="Dboard.html">
         <i class="icon fa-solid fa-chart-line"></i>
       </a>
       <br>
       <!-- Orphan -->
-      <a class="navbar btn btn-info" href="Orphan.html">
+      <a class="navbar btn btn-outline-dark" href="Orphan.html">
         <i class="icon fa-solid fa-children" ></i>
       </a>
       <br>
       <!-- Files -->
-      <a class="navbar btn btn-info" href="File.html">
+      <a class="navbar btn btn-outline-dark" href="File.html">
         <i class="icon fa-solid fa-folder-open"></i>
       </a>
       <br>
       <!-- Trash -->
-      <a class="navbar btn btn-info" href="Trash.html">
+      <a class="navbar btn btn-outline-dark" href="Trash.html">
         <i class="icon fa-solid fa-trash-can"></i>
       </a>
       <br>
       <!-- Setting -->
-      <a class="navbar btn btn-info" href="Setting.html">
+      <a class="navbar btn btn-outline-dark" href="Setting.html">
         <i class="icon fa-solid fa-gears"></i>
       </a>
       <br>
       <!-- Logout -->
-      <a class="navbar btn btn-info" href="Logout.html">
+      <a class="navbar btn btn-outline-dark" href="Logout.html">
         <i class="icon fa-solid fa-right-from-bracket"></i>
       </a>
   </div>
 
-</div>
+
 
 <div>
     <div class="container-fluid">
         <div class="container-orphan">
             <div class="file-manager">
-            <div class="file">
+              <div class="file">
                 <div class="dropdown-container">
+                    <img class="file-icon" src="..\Images\Profpic (7).png" alt="File Icon">
+                    <div class="file-name">File 1.txt</div>
                     <a class="icon-dropdown dropdown-button btn" id="myButton">
                         <i class="fa-solid fa-ellipsis"></i>
                     </a>
-                      <div class="dropdown-content" id="myDropdown">
-                        <a class="dropdown-item" href="notes.html">notes</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a class="dropdown-item" href="#" id="notesLink">Notes</a>
+                        <a class="dropdown-item" href="#" id="openForm">Open Form</a>
                         <a class="dropdown-item" href="#">Item 3</a>
-                      </div>
-                  <img class="file-icon" src="..\ProfilePic\Profpic (7).png" alt="File Icon">
-                  <div class="file-name">File 1.txt</div>
-                  </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Modal -->
+            <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalFormLabel">Modal Form</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="file">
-                <div class="dropdown-container">
-                    <a class="icon-dropdown dropdown-button btn" id="myButton">
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </a>
-                      <div class="dropdown-content" id="myDropdown">
-                        <a class="dropdown-item" href="notes.html">notes</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                        <a class="dropdown-item" href="#">Item 3</a>
-                      </div>
-                  <img class="file-icon" src="..\ProfilePic\Profpic (8).png" alt="File Icon">
-                  <div class="file-name">File 1.txt</div>
-                  </div>
+              <div class="dropdown-container">
+              <img class="file-icon" src="..\Images\Profpic (8).png" alt="File Icon">
+              <div class="file-name">File 1.txt</div>
+                  <a class="icon-dropdown dropdown-button btn" id="myButton">
+                      <i class="fa-solid fa-ellipsis"></i>
+                  </a>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a class="dropdown-item" href="notes.html">notes</a>
+                      <a class="dropdown-item" href="#">Item 2</a>
+                      <a class="dropdown-item" href="#">Item 3</a>
+                    </div>
+                </div>
             </div>
             <div class="file">
-                <div class="dropdown-container">
-                    <a class="icon-dropdown dropdown-button btn" id="myButton">
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </a>
-                      <div class="dropdown-content" id="myDropdown">
-                        <a class="dropdown-item" href="notes.html">notes</a>
-                        <a class="dropdown-item" href="#">notes</a>
-                        <a class="dropdown-item" href="#">Item 3</a>
-                      </div>
-                  <img class="file-icon" src="..\ProfilePic\Profpic (9).png" alt="File Icon">
-                  <div class="file-name">File 1.txt</div>
-                  </div>
+              <div class="dropdown-container">
+              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
+              <div class="file-name">File 1.txt</div>
+                  <a class="icon-dropdown dropdown-button btn" id="myButton">
+                      <i class="fa-solid fa-ellipsis"></i>
+                  </a>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a class="dropdown-item" href="notes.html">notes</a>
+                      <a class="dropdown-item" href="#">notes</a>
+                      <a class="dropdown-item" href="#">Item 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="file">
+              <div class="dropdown-container">
+              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
+              <div class="file-name">File 1.txt</div>
+                  <a class="icon-dropdown dropdown-button btn" id="myButton">
+                      <i class="fa-solid fa-ellipsis"></i>
+                  </a>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a class="dropdown-item" href="notes.html">notes</a>
+                      <a class="dropdown-item" href="#">notes</a>
+                      <a class="dropdown-item" href="#">Item 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="file">
+              <div class="dropdown-container">
+              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
+              <div class="file-name">File 1.txt</div>
+                  <a class="icon-dropdown dropdown-button btn" id="myButton">
+                      <i class="fa-solid fa-ellipsis"></i>
+                  </a>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a class="dropdown-item" href="notes.html">notes</a>
+                      <a class="dropdown-item" href="#">notes</a>
+                      <a class="dropdown-item" href="#">Item 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="file">
+              <div class="dropdown-container">
+              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
+              <div class="file-name">File 1.txt</div>
+                  <a class="icon-dropdown dropdown-button btn" id="myButton">
+                      <i class="fa-solid fa-ellipsis"></i>
+                  </a>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a class="dropdown-item" href="notes.html">notes</a>
+                      <a class="dropdown-item" href="#">notes</a>
+                      <a class="dropdown-item" href="#">Item 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="file">
+              <div class="dropdown-container">
+              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
+              <div class="file-name">File 1.txt</div>
+                  <a class="icon-dropdown dropdown-button btn" id="myButton">
+                      <i class="fa-solid fa-ellipsis"></i>
+                  </a>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a class="dropdown-item" href="notes.html">notes</a>
+                      <a class="dropdown-item" href="#">notes</a>
+                      <a class="dropdown-item" href="#">Item 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="file">
+              <div class="dropdown-container">
+              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
+              <div class="file-name">File 1.txt</div>
+                  <a class="icon-dropdown dropdown-button btn" id="myButton">
+                      <i class="fa-solid fa-ellipsis"></i>
+                  </a>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a class="dropdown-item" href="notes.html">notes</a>
+                      <a class="dropdown-item" href="#">notes</a>
+                      <a class="dropdown-item" href="#">Item 3</a>
+                    </div>
+                </div>
             </div>
             <!-- More file items can be added here -->
             </div>
@@ -120,6 +216,7 @@
     </div>
 </div>
 
+<script src="..\Js\note.js"></script>
 <script src="..\Js\file-dropdown.js"></script>
 </body>
 </html>

@@ -1,35 +1,60 @@
+/* -----------------------------------------background */
+body {
+    --dot-bg: #90e0ef;
+    --dot-color: #03045e;
+    --dot-size: 1px;
+    --dot-space: 22px;
+      background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
+  }
+/* ------------------------------------------------------------ */
 .row{
     background-color: rgb(134, 134, 224);
 }
 
 
 .sbar{
-    display: flex;
-    width: 30%;
-    padding-top: 10px;
+    background-color: none;
     position: absolute;
-    align-items: end;
-    left: 40%;
     /* border: 1px solid black; */
+    left: 60%;
+    width: 40%;
+    top: -40px;
 }
 .form-control{
-    width: 70%;
-    height: 5%;
+    width: 100%;
+    height: 40px;
     padding: 5px;
+    position: relative;
     /* border: 1px solid red; */
 }
 
-.container-fluid{
-    align-items: center;
+.col-6{
+    width: 100%;
 }
+
+.input-size{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+}
+
+.row-search{
+    background-color: none;
+    width: 100%;
+}
+
+
 .sidebar{
-    padding-top: 10%;
-    padding-left: 15px;
+    padding-top: 2%;
+    padding-left: 5px;
     width: 10%;
     height: 100%;
     position: absolute;
     /* border: 1px solid blue; */
-    background-color: rgb(47, 204, 243);
+    background-color: #00b4d8;
 }
 
 .navbar{
@@ -37,14 +62,20 @@
     padding: 5px;
     border: 1px red;
     position: relative;
-    left: 25px;
+    left: 18px;
     padding: 5px;
-    background-color: rgb(47, 204, 243);
+    background-color:  #00b4d8;;
 }
 
 /* -------------------bar chart---------- */
 .conatiner-bar{
     width: 70%;
+}
+
+.container-fluid-charts{
+    align-items: center;
+    background-color: none;
+
 }
 
 .chart{
@@ -58,6 +89,7 @@
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
 }
 
 /* -----------------Icon size */
@@ -68,26 +100,25 @@
 .icon-dropdown{
     font-size: 20px;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     bottom: 80px;
-    left: 0px;
+    
+    
 }
 
 /* -------container for all-------------- */
 
 .container-orphan{
-    position: absolute;
+    position: fixed;
   font-family: Arial, sans-serif;
   padding: 50px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #cbf7ff;
   border-radius: 12px;
   border: solid black 1px;
   left: 13%;
   top: 10%;
-  width: 80%;
+  width: 85%;
   height: 85%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -95,21 +126,27 @@
 /* ----------------------file manager */
 .file-manager {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    max-width: 80%;
+    max-height: 10px;
 }
   
   .file {
-    border: 1px solid #ccc;
+    border: 1px solid #ac0c0c;
     border-radius: 4px;
     padding: 10px;
     text-align: center;
+    height: 150px;
+    
+    
   }
   
   .file-icon {
-    width: 80px;
+    width: 100px;
     height: 80px;
-    margin-bottom: 10px;
+    margin: 12px;
+    margin-bottom: 16px;
   }
   
   .file-name {
@@ -128,15 +165,16 @@
       /* Style for the button DROPWONS----------------------------------------------------*/
       .dropdown-container {
         position: relative;
-        display: inline-block;
+        
     }
   
   .dropdown-button {
         color: #0026ff;
         cursor: pointer;
-        position: relative;
-        bottom: 80px;
+        position: absolute;
+        bottom: 110px;
         left: 0px;
+        border: none;
     }
 
     /* Style for the dropdown content */
@@ -145,7 +183,7 @@
         position: absolute;
         background-color: #f9f9f9;
         min-width: 120px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
         z-index: 1;
         top: 0px;
         left: 30px;
