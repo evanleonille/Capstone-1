@@ -12,7 +12,7 @@
 </head>
 <body>
     
-  <div class="sbar mt-5">
+  <div class="sbar ">
     <div class="row-search ">
         <div class="col-6">
             <div class="input-size input-group mb-3">
@@ -26,32 +26,32 @@
 
   <div class="sidebar ">
     <!-- Dashboard -->
-      <a class="navbar btn btn-outline-dark"  href="Dboard.html">
+      <a class="navbar btn btn-outline-primary"  href="Dboard.html">
         <i class="icon fa-solid fa-chart-line"></i>
       </a>
       <br>
       <!-- Orphan -->
-      <a class="navbar btn btn-outline-dark" href="Orphan.html">
+      <a class="navbar btn btn-outline-primary" href="Orphan.html">
         <i class="icon fa-solid fa-children" ></i>
       </a>
       <br>
       <!-- Files -->
-      <a class="navbar btn btn-outline-dark" href="File.html">
+      <a class="navbar btn btn-outline-primary" href="File.html">
         <i class="icon fa-solid fa-folder-open"></i>
       </a>
       <br>
       <!-- Trash -->
-      <a class="navbar btn btn-outline-dark" href="Trash.html">
+      <a class="navbar btn btn-outline-primary" href="Trash.html">
         <i class="icon fa-solid fa-trash-can"></i>
       </a>
       <br>
       <!-- Setting -->
-      <a class="navbar btn btn-outline-dark" href="Setting.html">
+      <a class="navbar btn btn-outline-primary" href="Setting.html">
         <i class="icon fa-solid fa-gears"></i>
       </a>
       <br>
       <!-- Logout -->
-      <a class="navbar btn btn-outline-dark" href="Logout.html">
+      <a class="navbar btn btn-outline-primary" href="Logout.html">
         <i class="icon fa-solid fa-right-from-bracket"></i>
       </a>
   </div>
@@ -61,11 +61,41 @@
 <div>
     <div class="container-fluid">
         <div class="container-orphan">
-            <div class="file-manager">
-              <div class="file">
+
+          <div class="container flex-grow-1 light-style container-p-y">
+            <div class="container-m-nx container-m-ny bg-lightest mb-3">
+                
+          
+                <hr class="m-0" />
+          
+                <div class="file-manager-actions container-p-x py-2">
+                    <div>
+                        <button type="button" class="btn btn-primary mr-2"><i class="ion ion-md-cloud-upload"></i>&nbsp; Upload</button>
+                        <button type="button" class="btn btn-secondary icon-btn mr-2" disabled=""><i class="ion ion-md-cloud-download"></i></button>
+                        <div class="btn-group mr-2">
+                            <button type="button" class="btn btn-default md-btn-flat dropdown-toggle px-2" data-toggle="dropdown"><i class="ion ion-ios-settings"></i></button>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="javascript:void(0)">Move</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Copy</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-default icon-btn md-btn-flat active"> <input type="radio" name="file-manager-view" value="file-manager-col-view" checked="" /> <span class="ion ion-md-apps"></span> </label>
+                            <label class="btn btn-default icon-btn md-btn-flat"> <input type="radio" name="file-manager-view" value="file-manager-row-view" /> <span class="ion ion-md-menu"></span> </label>
+                        </div>
+                    </div>
+                </div>
+          
+                <hr class="m-0" />
+
+            <div class="file-manager-orphan">
+              <div class="file-orphan">
                 <div class="dropdown-container">
-                    <img class="file-icon" src="..\Images\Profpic (7).png" alt="File Icon">
-                    <div class="file-name">File 1.txt</div>
+                    <img class="file-icon-orphan" src="..\Images\Profpic (7).png" alt="File Icon">
+                    <div class="file-name-orphan">File 1.txt</div>
                     <a class="icon-dropdown dropdown-button btn" id="myButton">
                         <i class="fa-solid fa-ellipsis"></i>
                     </a>
@@ -92,7 +122,7 @@
                                     <input type="text" class="form-control" id="name">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
+                                    <label for "email" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="email">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -101,104 +131,11 @@
                     </div>
                 </div>
             </div>
-            <div class="file">
-              <div class="dropdown-container">
-              <img class="file-icon" src="..\Images\Profpic (8).png" alt="File Icon">
-              <div class="file-name">File 1.txt</div>
-                  <a class="icon-dropdown dropdown-button btn" id="myButton">
-                      <i class="fa-solid fa-ellipsis"></i>
-                  </a>
-                    <div class="dropdown-content" id="myDropdown">
-                      <a class="dropdown-item" href="notes.html">notes</a>
-                      <a class="dropdown-item" href="#">Item 2</a>
-                      <a class="dropdown-item" href="#">Item 3</a>
-                    </div>
-                </div>
-            </div>
-            <div class="file">
-              <div class="dropdown-container">
-              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
-              <div class="file-name">File 1.txt</div>
-                  <a class="icon-dropdown dropdown-button btn" id="myButton">
-                      <i class="fa-solid fa-ellipsis"></i>
-                  </a>
-                    <div class="dropdown-content" id="myDropdown">
-                      <a class="dropdown-item" href="notes.html">notes</a>
-                      <a class="dropdown-item" href="#">notes</a>
-                      <a class="dropdown-item" href="#">Item 3</a>
-                    </div>
-                </div>
-            </div>
-            <div class="file">
-              <div class="dropdown-container">
-              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
-              <div class="file-name">File 1.txt</div>
-                  <a class="icon-dropdown dropdown-button btn" id="myButton">
-                      <i class="fa-solid fa-ellipsis"></i>
-                  </a>
-                    <div class="dropdown-content" id="myDropdown">
-                      <a class="dropdown-item" href="notes.html">notes</a>
-                      <a class="dropdown-item" href="#">notes</a>
-                      <a class="dropdown-item" href="#">Item 3</a>
-                    </div>
-                </div>
-            </div>
-            <div class="file">
-              <div class="dropdown-container">
-              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
-              <div class="file-name">File 1.txt</div>
-                  <a class="icon-dropdown dropdown-button btn" id="myButton">
-                      <i class="fa-solid fa-ellipsis"></i>
-                  </a>
-                    <div class="dropdown-content" id="myDropdown">
-                      <a class="dropdown-item" href="notes.html">notes</a>
-                      <a class="dropdown-item" href="#">notes</a>
-                      <a class="dropdown-item" href="#">Item 3</a>
-                    </div>
-                </div>
-            </div>
-            <div class="file">
-              <div class="dropdown-container">
-              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
-              <div class="file-name">File 1.txt</div>
-                  <a class="icon-dropdown dropdown-button btn" id="myButton">
-                      <i class="fa-solid fa-ellipsis"></i>
-                  </a>
-                    <div class="dropdown-content" id="myDropdown">
-                      <a class="dropdown-item" href="notes.html">notes</a>
-                      <a class="dropdown-item" href="#">notes</a>
-                      <a class="dropdown-item" href="#">Item 3</a>
-                    </div>
-                </div>
-            </div>
-            <div class="file">
-              <div class="dropdown-container">
-              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
-              <div class="file-name">File 1.txt</div>
-                  <a class="icon-dropdown dropdown-button btn" id="myButton">
-                      <i class="fa-solid fa-ellipsis"></i>
-                  </a>
-                    <div class="dropdown-content" id="myDropdown">
-                      <a class="dropdown-item" href="notes.html">notes</a>
-                      <a class="dropdown-item" href="#">notes</a>
-                      <a class="dropdown-item" href="#">Item 3</a>
-                    </div>
-                </div>
-            </div>
-            <div class="file">
-              <div class="dropdown-container">
-              <img class="file-icon" src="..\Images\Profpic (9).png" alt="File Icon">
-              <div class="file-name">File 1.txt</div>
-                  <a class="icon-dropdown dropdown-button btn" id="myButton">
-                      <i class="fa-solid fa-ellipsis"></i>
-                  </a>
-                    <div class="dropdown-content" id="myDropdown">
-                      <a class="dropdown-item" href="notes.html">notes</a>
-                      <a class="dropdown-item" href="#">notes</a>
-                      <a class="dropdown-item" href="#">Item 3</a>
-                    </div>
-                </div>
-            </div>
+        
+            <!-- Include Bootstrap JS (you can adjust the path) -->
+
+        
+            
             <!-- More file items can be added here -->
             </div>
             <div class="crud-buttons">
