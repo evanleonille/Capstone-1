@@ -1,20 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const threeDotMenu = document.querySelector(".three-dot-menu");
-    const dropdown = document.getElementById("myDropdown");
-    const notesLink = document.getElementById("notesLink");
-    const modalForm = document.getElementById("modalForm");
-    const closeForm = document.getElementById("closeForm");
+function openPopupForm() {
+    var popup = document.getElementById("popup-form");
+    popup.style.display = "block";
+}
 
-    threeDotMenu.addEventListener("click", function() {
-        dropdown.style.display = "block";
-    });
-
-    notesLink.addEventListener("click", function(e) {
-        e.preventDefault();
-        modalForm.style.display = "block";
-    });
-
-    closeForm.addEventListener("click", function() {
-        modalForm.style.display = "none";
-    });
-});
+function closePopupForm() {
+    var popup = document.getElementById("popup-form");
+    popup.style.display = "none";
+}

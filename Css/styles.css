@@ -240,6 +240,34 @@ body {
     padding: 20px;
     top: 90%;
   }
+/* ----------------------------popup form template--------------- */
+
+.popup-form {
+    position: absolute;
+    font-size: 10px;
+    width: 40%;
+    height: 55%;
+    display: none;
+    padding: 5px;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    border: 1px solid black;
+    left: 20%;
+}
+
+.popup-form input[type="text"]{
+    width: 100%;
+    height: 30%;
+}
+ 
+#comment {
+    height: 50%;
+}
+
+
+
+
   /* ------------------------------file manager template---------------------- */
  
   .file-manager-actions {
