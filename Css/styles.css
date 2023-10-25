@@ -77,22 +77,56 @@ body {
 
 .container-fluid-charts{
     align-items: center;
-    background-color: none;
+    left: 12%;
+    top: 10%;
+    width: 85%;
+    height: 85%;
+    /* border: 1px solid black; */
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
 
 }
 
 .chart{
-    position: relative;
+    
     max-width: 50%;
     max-height: 200px;
-    display: flex;
-    top: 100px;
-    left: 12%;
+    top: 1%;
+    left: 1%;
     border: 1px solid black;
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: white;
+    margin: 2%;
+}
+
+.chart1{
+    position: relative;
+    max-width: 30%;
+    max-height: 200px;
+    display: flex;
+    top: 3%;
+    left: 1%;
+    border: 1px solid black;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.container-dashboard-notif{
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 12px;
+    left: 55%;
+    background-color: white;
+
 }
 
 /* -----------------Icon size */
@@ -123,15 +157,19 @@ body {
   top: 10%;
   width: 85%;
   height: 85%;
+  overflow-y: scroll;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+
+
+
 /* ----------------------file manager */
 .file-manager-orphan {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 5px;
-    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    max-width: 100%;
     max-height: 10px;
 }
   
@@ -141,8 +179,9 @@ body {
     padding: 10px;
     text-align: center;
     height: 150px;
-    
-    
+    position: relative;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 2%;
   }
   
   .file-icon-orphan {
@@ -243,17 +282,18 @@ body {
 /* ----------------------------popup form template--------------- */
 
 .popup-form {
-    position: absolute;
+    position: fixed;
     font-size: 10px;
-    width: 40%;
-    height: 55%;
+    width: 50%;
+    height: 50%;
     display: none;
     padding: 5px;
-    background-color: white;
-    position: absolute;
+    background-color: rgb(124, 245, 239);
     z-index: 2;
     border: 1px solid black;
-    left: 20%;
+    border-radius: 12px;
+    left: 30%;
+    box-shadow: 0px 8px 16px 0px rgba(12, 1, 1, 0.2);
 }
 
 .popup-form input[type="text"]{
