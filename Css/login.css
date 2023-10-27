@@ -1,14 +1,28 @@
 
 /*----------------------------- Page 1*/
-.cback{
-    background-color: azure;
+
+body{
     background-image: url("../Images/bg_1.png"),url("../Images/bg_2.png");
     background-position: left, center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
+    
+  
+
+}
+
+.dim{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.575);
     width: 100%;
     height: 100%;
-    margin-top: 50%;
+    
+}
+
+.cback{
+    background-color: azure;
+    width: 100%;
+    height: 100%;
     background-attachment: fixed,fixed;
     resize: none;
     overflow: hidden;

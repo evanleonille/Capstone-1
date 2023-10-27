@@ -95,7 +95,7 @@ body {
     position: absolute;
   font-family: Arial, sans-serif;
   padding: 20px;
-  display: flex;
+  
   background-color: #FBF9F6;
   border-radius: 12px;
   border: solid black 1px;
@@ -163,6 +163,10 @@ body {
         bottom: 110px;
         left: 0px;
         border: none;
+    }
+
+    .dropdown-button:hover{
+        background-color: transparent;
     }
 
     /* Style for the dropdown content */

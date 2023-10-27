@@ -72,7 +72,6 @@ body {
     justify-content: center;
 }
 
-/* -----------------Icon size */
 .icon{
     font-size: 33px;
 }
@@ -85,62 +84,68 @@ body {
     
     
 }
-/* -------------------bar chart---------- */
-.conatiner-bar{
-    width: 70%;
-}
 
-.container-fluid-charts{
-    align-items: center;
-    left: 12%;
-    top: 10%;
-    width: 85%;
-    height: 85%;
-    /* border: 1px solid black; */
+
+.container-orphan{
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  
+  background-color: #FBF9F6;
+  border-radius: 12px;
+  border: solid black 1px;
+  left: 12%;
+  top: 10%;
+  width: 85%;
+  height: 85%;
+  overflow-y: scroll;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.chart{
-    
-    max-width: 50%;
-    max-height: 200px;
-    top: 1%;
-    left: 1%;
-    border: 1px solid black;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: white;
-    margin: 2%;
-}
 
-.chart1{
+
+
+/* -------------------content---------------------------- */
+
+.file-icon{
     position: relative;
-    max-width: 30%;
-    max-height: 200px;
-    display: flex;
-    top: 3%;
-    left: 1%;
-    border: 1px solid black;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: white;
-}
-
-.container-dashboard-notif{
+    width: 20%;
     height: 100%;
-    width: 45%;
-    position: absolute;
-    border: 1px solid black;
-    border-radius: 12px;
-    left: 55%;
-    background-color: white;
-
 }
 
+.header{
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    height: 25%;
+}
+
+.info {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+
+
+.orphan-info{
+    border: 1px solid black;
+    position: absolute;
+    width: 45%;
+    height: 70%;
+    left: 50%;
+}
+
+.orphan-info-2{
+    border: 1px solid black;
+    position: absolute;
+    width: 45%;
+    height: 70%;
+    
+}
