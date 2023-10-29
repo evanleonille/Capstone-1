@@ -134,6 +134,7 @@ body {
 }
 
 .container-dashboard-notif{
+    padding: 10px;
     height: 100%;
     width: 45%;
     position: absolute;
@@ -141,6 +142,38 @@ body {
     border-radius: 12px;
     left: 55%;
     background-color: white;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* --------------------notification---------------------- */
+.notification-log {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.notification {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.notification:last-child {
+    border-bottom: none;
+}
+
+.notification h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.notification p {
+    margin: 5px 0;
+}
+
+.timestamp {
+    color: #888;
+    font-size: 12px;
+}
