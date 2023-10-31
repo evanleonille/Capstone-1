@@ -13,16 +13,16 @@
 </head>
 <body>
     
-  <div class="sbar ">
-    <div class="row-search ">
-        <div class="col-6">
-            <div class="input-size input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search...">
-                <button class="btn btnbtn-outline-lightbtn-outline-light" type="button">Search</button>
+    <div class="sbar ">
+        <div class="row-search ">
+            <div class="col-6">
+                <div class="input-size input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
   <div class="sidebar ">
@@ -94,7 +94,7 @@
 
                 
 
-            <div class="file-manager-orphan">
+            <div class="">
             <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="orphan-content.html">
                 <div class="btn btn-outline-light file-orphan" >
                  
@@ -353,16 +353,18 @@
             
             <div class="popup-form" id="popup-form">
               <p>Popup Form</p>
-              <form>
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name"><br><br>
-                  <label for="comment">Comment:</label>
-                  <input type="text" id="comment" name="comment"><br><br>
-                </form>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">name</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+                <textarea class="form-control-popup form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
 
                 <div class="popup-btn"> 
-                <button class="btn btn-outline-dark" type="submit" value="Submit"> Submit </button>
-                <button class="btn btn-outline-dark" onclick="closePopupForm()">Close</button>
+                <button class="btn btn-primary" type="submit" value="Submit"> Submit </button>
+                <button class="btn btn-primary" onclick="closePopupForm()">Close</button>
                 </div>
           </div>
             

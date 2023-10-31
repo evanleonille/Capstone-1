@@ -60,16 +60,15 @@ body {
 }
 
 .navbar{
-    width: 50px;
-    padding: 5px;
     border: 1px red;
     position: relative;
-    left: 15px;
-    padding: 5px;
+    display: flex;
     background-color: none;
     color: #9FC3E5;
-    display: flex;
+    align-items: center;
     justify-content: center;
+    width: 60%;
+    left: 20%;
 }
 
 .icon{
@@ -127,7 +126,8 @@ body {
     height: 150px;
     position: relative;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin-top: 2%;
+    margin-top: 10px;
+    margin-right: 10px;
   }
   
   .file-icon-orphan {
@@ -200,16 +200,21 @@ body {
         position: fixed;
         font-size: 10px;
         width: 50%;
-        height: 50%;
+        height: 45%;
         display: none;
         padding: 5px;
-        background-color: azure;
+        background-color: rgb(255, 255, 255);
         z-index: 2;
         border: 1px solid black;
         border-radius: 12px;
         left: 30%;
+        top: 25%;
         box-shadow: 0px 8px 16px 0px rgba(12, 1, 1, 0.2);
-    }
+}
+    
+.form-control-popup{
+    height: 60%;
+}
     
     .popup-form input[type="text"]{
         width: 100%;

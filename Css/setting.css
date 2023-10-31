@@ -85,94 +85,66 @@ body {
     
 }
 
-/* --------------------notification---------------------- */
-.notification-log {
-    max-width: 400px;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 20px;
+.inputbox{
+    width: 60%;
 }
 
-.notification {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
 
-.notification:last-child {
-    border-bottom: none;
-}
 
-.notification h3 {
-    font-size: 18px;
-    margin: 0;
-}
-
-.notification p {
-    margin: 5px 0;
-}
-
-.timestamp {
-    color: #888;
-    font-size: 12px;
-}
-/* -------------------bar chart---------- */
-.conatiner-bar{
-    width: 70%;
-}
-
-.container-fluid-charts{
-    align-items: center;
-    left: 12%;
-    top: 10%;
-    width: 85%;
-    height: 85%;
-    /* border: 1px solid black; */
+.container-orphan{
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 20px;
+  
+  background-color: #FBF9F6;
+  border-radius: 12px;
+  border: solid black 1px;
+  left: 12%;
+  top: 10%;
+  width: 85%;
+  height: 85%;
+  overflow-y: scroll;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.chart{
-    
-    max-width: 50%;
-    max-height: 200px;
-    top: 1%;
-    left: 1%;
-    border: 1px solid black;
-    border-radius: 12px;
+.form-group {
     margin-bottom: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: white;
-    margin: 2%;
-}
+  }
 
-.chart1{
-    position: relative;
-    max-width: 30%;
-    max-height: 200px;
-    display: flex;
-    top: 3%;
-    left: 1%;
-    border: 1px solid black;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: white;
-}
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
 
-.container-dashboard-notif{
+  .form-group input {
+    width: 100%;
     padding: 10px;
-    height: 100%;
-    width: 45%;
+    border-radius: 5px;
+    border: none;
+    border: solid black 1px;
+  }
+
+  .form-group input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  .form-group input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .profile{
     position: absolute;
+    left: 65%;
+    width: 30%;
+    height: 50%;
+    top: 10%;
     border: 1px solid black;
-    border-radius: 12px;
-    left: 55%;
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.larger-image{
+    width: 100%;
+    height: 80%;
 }
