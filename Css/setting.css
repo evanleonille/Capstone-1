@@ -109,6 +109,9 @@ body {
 
 .form-group {
     margin-bottom: 10px;
+    border: 1px solid black;
+    width: 60%;
+    position: absolute;
   }
 
   .form-group label {
@@ -147,4 +150,10 @@ body {
 .larger-image{
     width: 100%;
     height: 80%;
+}
+
+
+.editbtn{
+    display: flex;
+    justify-content: space-between;
 }

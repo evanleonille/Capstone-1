@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="..\Css\setting.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/d050a6d764.js" crossorigin="anonymous"></script>
@@ -62,32 +63,36 @@
 
 
       <div class="container-orphan">
-        <div class="inputbox">
-        <form>
-          <div class="form-group">
-            <label for="first-name">First Name:</label>
-            <input class="form-control" type="text" placeholder="Ash pickachu oakwood" readonly>
+        <div class="form-group container ">
+          <div class="form-container bg-light p-4 rounded">
+            <form id="myForm">
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First Name:</label>
+                <input type="text" class="form-control" id="firstName" value="John" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="middleName" class="form-label">Middle Name:</label>
+                <input type="text" class="form-control" id="middleName" value="Doe" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name:</label>
+                <input type="text" class="form-control" id="lastName" value="Smith" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="username" value="johndoe123" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="password" value="********" readonly>
+              </div>
+            </form>
+            <button id="editButton" class="btn btn-primary">Edit</button>
+            <div class="editbtn">
+            <button id="saveButton" class="btn btn-success" style="display: none;">Save</button>
+            <button id="cancelButton" class="btn btn-secondary" style="display: none;">Cancel</button>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="last-name">Last Name:</label>
-            <input class="form-control" type="text" placeholder="Barcher habolido" readonly>
-          </div>
-          <div class="form-group">
-            <label for="middle-name">Middle Name:</label>
-            <input class="form-control" type="text" placeholder="Readonly input here…" >
-          </div>
-          <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" >
-          </div>
-          <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" >
-          </div>
-          <div class="form-group">
-            <button class="edit-button"  onclick="openPopup()">Edit</button>
-          </div>
-        </form>
         </div>
         <div class="profile">
           <img class="larger-image" src="..\Images\Setting.png" alt="Logout"><br>
@@ -98,4 +103,10 @@
           </ul>
         </div>
     </div>
+
+
+
+    <script src="..\Js\setting-popup.js"></script>
+</body>
+</html>
 
