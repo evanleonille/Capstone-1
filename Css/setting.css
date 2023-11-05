@@ -109,7 +109,9 @@ body {
 
 .form-group {
     margin-bottom: 10px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     width: 60%;
     position: absolute;
   }
@@ -157,3 +159,5 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+
