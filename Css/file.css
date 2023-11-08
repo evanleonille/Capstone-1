@@ -165,7 +165,43 @@ body {
 }
 
 
+/* -----------------------------------upload popup------------------ */
 
+
+.popup-form {
+    position: fixed;
+    font-size: 10px;
+    width: 50%;
+    height: 45%;
+    display: none;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    border: 1px solid black;
+    border-radius: 12px;
+    left: 30%;
+    top: 25%;
+    box-shadow: 0px 8px 16px 500px rgb(12 1 1 / 48%);
+}
+
+.form-control-popup{
+height: 60%;
+}
+
+.popup-form input[type="text"]{
+    width: 100%;
+    font-size: 20px;
+}
+
+.popup-btn{
+    display: flex;
+    justify-content: space-between;
+}
+ 
+#comment {
+    font-size: 14px;
+    height: 100px;
+}
 
 
 

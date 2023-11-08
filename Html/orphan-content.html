@@ -67,10 +67,10 @@
                 <h3>Johny Depp</h3>
                 <p>192-2766-09-9</p>
             </div>
-            <div class="info-icon">
-                <button class="btn btn-primary"> Edit </button>
+            <div class="info-icon" id="popupform">
+                <button class="btn btn-primary" onclick="openPopupForm()"> Notes </button>
                 <br>
-                <button class="btn btn-primary"> Delete </button>
+               
             </div>
         </div>
     </div>
@@ -98,6 +98,24 @@
 
   </div>
 
+  <div class="popup-form" id="popup-form">
+    <p>Popup Form</p>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">name</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+      <textarea class="form-control-popup form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+      <div class="popup-btn"> 
+      <button class="btn btn-primary" type="submit" value="Submit"> Submit </button>
+      <button class="btn btn-primary" onclick="closePopupForm()">Close</button>
+      </div>
+</div>
+
       
+<script src="..\Js\note.js"></script>
 </body>
 </html>

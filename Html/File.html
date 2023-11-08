@@ -69,28 +69,16 @@
 
         <hr class="m-0" />
 
-        <div class="file-manager-actions container-p-x py-2">
-            <div>
-                <button type="button" class="btn btn-primary mr-2"><i class="ion ion-md-cloud-upload"></i>&nbsp; Upload</button>
-                <button type="button" class="btn btn-secondary icon-btn mr-2" disabled=""><i class="ion ion-md-cloud-download"></i></button>
-                <div class="btn-group mr-2">
-                    <button type="button" class="btn btn-default md-btn-flat dropdown-toggle px-2" data-toggle="dropdown"><i class="ion ion-ios-settings"></i></button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="javascript:void(0)">Move</a>
-                        <a class="dropdown-item" href="javascript:void(0)">Copy</a>
-                        <a class="dropdown-item" href="javascript:void(0)">Remove</a>
+                    <div class="file-manager-actions container-p-x py-2">
+                        <div>
+                            <button type="button" class="btn btn-primary mr-2" type="file" id="formFile" onclick="openPopupForm()"><i class="ion ion-md-cloud-upload" ></i>&nbsp; Upload</button>
+                            <button type="button" class="btn btn-secondary icon-btn mr-2" ><i class="ion ion-md-cloud-download"></i> Download </button>
+                            
+                        </div>
+                        
                     </div>
-                </div>
-            </div>
-            <div>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-default icon-btn md-btn-flat active"> <input type="radio" name="file-manager-view" value="file-manager-col-view" checked="" /> <span class="ion ion-md-apps"></span> </label>
-                    <label class="btn btn-default icon-btn md-btn-flat"> <input type="radio" name="file-manager-view" value="file-manager-row-view" /> <span class="ion ion-md-menu"></span> </label>
-                </div>
-            </div>
-        </div>
 
-        <hr class="m-0" />
+                <hr class="m-0" />
     </div>
 
     <div class="file-manager-container file-manager-col-view">
@@ -99,19 +87,11 @@
             <div class="file-item-changed pb-2">Changed</div>
         </div>
 
-        <div class="file-item">
-            <div class="file-item-icon file-item-level-up fas fa-level-up-alt text-secondary"></div>
-            <a href="javascript:void(0)" class="file-item-name">
-                ..
-            </a>
-        </div>
+        
 
         <div class="file-item">
             <div class="file-item-select-bg bg-primary"></div>
-            <label class="file-item-checkbox custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" />
-                <span class="custom-control-label"></span>
-            </label>
+        
             <div class="file-item-icon far fa-folder text-secondary"></div>
             <a href="javascript:void(0)" class="file-item-name">
                 Images
@@ -218,9 +198,28 @@
 
     </div>
 
+    <div class="popup-form" id="popup-form">
+        <p>Add Orphan</p>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">name</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Default file input example</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            
+
+              <div class="popup-btn"> 
+              <button class="btn btn-primary" type="submit" value="Submit"> Submit </button>
+              <button class="btn btn-primary" onclick="closePopupForm()">Close</button>
+              </div>
+    </div>
 
 </div>
 </div>
 
+
+<script src="..\Js\file-upload.js"></script>
 </body>
 </html>

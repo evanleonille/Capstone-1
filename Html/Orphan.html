@@ -71,23 +71,11 @@
 
                     <div class="file-manager-actions container-p-x py-2">
                         <div>
-                            <button type="button" class="btn btn-primary mr-2"><i class="ion ion-md-cloud-upload"></i>&nbsp; Add</button>
-                            <button type="button" class="btn btn-secondary icon-btn mr-2" disabled=""><i class="ion ion-md-cloud-download"></i></button>
-                            <div class="btn-group mr-2">
-                                <button type="button" class="btn btn-default md-btn-flat dropdown-toggle px-2" data-toggle="dropdown"><i class="ion ion-ios-settings"></i></button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0)">Move</a>
-                                    <a class="dropdown-item" href="javascript:void(0)">Copy</a>
-                                    <a class="dropdown-item" href="javascript:void(0)">Remove</a>
-                                </div>
-                            </div>
+                            <button type="button" class="btn btn-primary mr-2" type="file" id="formFile" onclick="openPopupForm1()"><i class="ion ion-md-cloud-upload" ></i>&nbsp; Add</button>
+                            <button type="button" class="btn btn-secondary icon-btn mr-2" ><i class="ion ion-md-cloud-download"></i> Download </button>
+                            
                         </div>
-                        <div>
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-default icon-btn md-btn-flat active"> <input type="radio" name="file-manager-view" value="file-manager-col-view" checked="" /> <span class="ion ion-md-apps"></span> </label>
-                                <label class="btn btn-default icon-btn md-btn-flat"> <input type="radio" name="file-manager-view" value="file-manager-row-view" /> <span class="ion ion-md-menu"></span> </label>
-                            </div>
-                        </div>
+                        
                     </div>
 
                 <hr class="m-0" />
@@ -105,9 +93,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -125,9 +113,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -143,9 +131,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -161,9 +149,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -179,9 +167,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -197,9 +185,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -215,9 +203,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -233,9 +221,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -251,9 +239,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -269,9 +257,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -288,9 +276,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -306,9 +294,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -324,9 +312,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -342,9 +330,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                         <div class="dropdown-content" id="myDropdown">
-                            <a class="dropdown-item" onclick="openPopupForm()"  >Notes</a>
-                            <a class="dropdown-item" href="#" id="openForm">Open Form</a>
-                            <a class="dropdown-item" href="#">Item 3</a>
+                            <a class="dropdown-item" onclick="openPopupForm()"  >Edit</a>
+                            <a class="dropdown-item" href="#" id="openForm">Delete</a>
+                            
                         </div>
                     </div>
               </div>
@@ -357,16 +345,33 @@
                 <label for="exampleFormControlInput1" class="form-label">name</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
-                <textarea class="form-control-popup form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
+              
 
                 <div class="popup-btn"> 
                 <button class="btn btn-primary" type="submit" value="Submit"> Submit </button>
                 <button class="btn btn-primary" onclick="closePopupForm()">Close</button>
                 </div>
           </div>
+
+
+
+          <div class="popup-form-add" id="popup-form-add">
+            <p>Add Orphan</p>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">name</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Default file input example</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            
+
+              <div class="popup-btn"> 
+              <button class="btn btn-primary" type="submit" value="Submit"> Submit </button>
+              <button class="btn btn-primary" onclick="closePopupForm1()">Close</button>
+              </div>
+        </div>
             
         </div>
           
@@ -391,6 +396,7 @@
 </div>
 
 <script src="..\Js\note.js"></script>
+<script src="..\Js\add-orphan.js"></script>
 <script src="..\Js\file-dropdown.js"></script>
 </body>
 </html>
