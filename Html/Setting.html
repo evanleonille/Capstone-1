@@ -2,127 +2,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../Css/orphan.css">
+  <link rel="stylesheet" type="text/css" href="../Css/file.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css" integrity="sha512-0/rEDduZGrqo4riUlwqyuHDQzp2D1ZCgH/gFIfjMIL5az8so6ZiXyhf1Rg8i6xsjv+z/Ubc4tt1thLigEcu6Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/d050a6d764.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
-<div>
-  <div class="container-fluid">
-      <div class="container-orphan">
+{% extends "Dashboard/base.html" %}
 
-        <div class="container flex-grow-1 light-style container-p-y">
-          <div class="container-m-nx container-m-ny bg-lightest mb-3">
+{% load static %}
+
+{% block title %}
+    Trash
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/Trash.css' %}">
+{% endblock %}
+
+<body>
+    <main>
+    {% block content %}
+
+    <div class="container-orphan">
+        <div class="container flex-grow-1 primary-style container-p-y">
+            <div class="container-m-nx container-m-ny bg-primaryest mb-3">
               <hr class="m-0" />
-                  <div class="file-manager-actions container-p-x py-2">
-                      <div>
-                          <button type="button" class="btn btn-primary mr-2" type="file" id="formFile" onclick="openPopupForm1()"><i class="ion ion-md-cloud-upload" ></i>&nbsp; Add</button>
-                          <button type="button" class="btn btn-secondary icon-btn mr-2" ><i class="ion ion-md-cloud-download"></i> Download </button>
-                      </div>
-                  </div>
-              <hr class="m-0" />
 
-
-      
-<!-- REFLECT THE DATAABSE PROFILE PIC PA:  <img class="file-icon-orphan" src="{{ orphan.profile_picture.url }}" alt="File Icon"> -->
-
-
-
-          {% for orphan in orphans %}
-          <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{% url 'orphan_profile' orphan.orphanID %}">
-            <div class="btn btn-outline-light file-orphan" >
-            
-              <div class="dropdown-container">
-                <img class="file-icon-orphan" href="{% static 'images/D1' %}" alt="File Icon">
-                <div class="file-name-orphan ">{{ orphan.firstName }} {{ orphan.lastName }}</div>
-                <a class="icon-dropdown dropdown-button btn" id="myButton">
-                  <i class="fa-solid fa-ellipsis"></i>
-                </a>
-                <div class="dropdown-content" id="myDropdown">
-                  <a class="dropdown-item" onclick="openPopupForm()">Edit</a>
-                  <a class="dropdown-item" href="#" id="openForm">Delete</a>
-                </div>
-              </div>
-            </div>
-          </a>
-        {% endfor %}
-        
-                
-          
-          <div class="popup-form" id="popup-form">
-            <p>Popup Form</p>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">name</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            
-
-              <div class="popup-btn"> 
-              <button class="btn btn-primary" type="submit" value="Submit"> Submit </button>
-              <button class="btn btn-primary" onclick="closePopupForm()">Close</button>
-              </div>
-        </div>
-
-
-
-        <div class="container mt-5 popup-form-add" id="popup-form-add">
-          <form>
-              <div class="row mb-3 bg-transparent">
-                  <div class="col-md-4">
-                      <label for="firstName" class="form-label">First Name</label>
-                      <input type="text" class="form-control" id="firstName" required>
+              <div class="file-manager-actions container-p-x py-2">
+                  <div>
+                      <button type="button" class="btn btn-secondary icon-btn mr-1" ><i class="ion ion-md-cloud-restore"></i> Restore </button>
+                      
                   </div>
-                  <div class="col-md-4">
-                      <label for="lastName" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="lastName" required>
-                  </div>
-                  <div class="col-md-4">
-                      <label for="middleName" class="form-label">Middle Name</label>
-                      <input type="text" class="form-control" id="middleName">
-                  </div>
-              </div>
-  
-              <div class="row mb-3 bg-transparent">
-                  <div class="col-md-4">
-                      <label for="gender" class="form-label">Gender</label>
-                      <select class="form-select" id="gender" required>
-                          <option value="">Select Gender</option>
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
-                          <option value="other">Other</option>
-                      </select>
-                  </div>
-                  <div class="col-md-4">
-                      <label for="birthdate" class="form-label">Birthdate</label>
-                      <input type="date" class="form-control" id="birthdate" required>
-                  </div>
-                  <div class="col-md-4">
-                      <label for="ethnicity" class="form-label">Ethnicity</label>
-                      <input type="text" class="form-control" id="ethnicity">
-                  </div>
-              </div>
-  
-              <div class="row mb-3 bg-transparent">
-                  <div class="col-md-4">
-                      <label for="dateAdmitted" class="form-label">Date Admitted</label>
-                      <input type="date" class="form-control" id="dateAdmitted" required>
-                  </div>
-                  <div class="col-md-8">
-                      <label for="file" class="form-label">Upload File</label>
-                      <input type="file" class="form-control" id="file">
-                  </div>
-              </div>
-  
-              
-                  <button class="btn btn-primary" type="submit" value="Submit"> Submit </button>
-                  <button class="btn btn-primary" onclick="closePopupForm1()">Close</button>
                   
-          </form>
-      </div>
-          
-      </div>
-      </div>
-  </div>
-</div>
+              </div>
+
+          <hr class="m-0" />
+            </div>
+
+            <div class="file-manager-container file-manager-col-view">
+                <div class="file-manager-row-header">
+                    <div class="file-item-name pb-2">Filename</div>
+                    <div class="file-item-changed pb-2">Changed</div>
+                </div>
+
+                {% for file in files %}
+                    <div class="file-item">
+                      <label class="file-item-checkbox custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" />
+                        <span class="custom-control-label"></span>
+                      </label>
+                        <div class="file-item-select-bg bg-primary"></div>
+                        
+                        <div class="file-item-icon far fa-file-archive text-secondary"></div>
+                        <a href="javascript:void(0)" class="file-item-name">
+                            {{ file.fileName }}
+                        </a>
+                        <div class="file-item-changed">02/16/2018</div> <!-- Replace this with the actual file change date if you have it -->
+                        
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+    </main>
+</body>
+</html>
