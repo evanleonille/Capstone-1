@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../Css/Dboard.css">
+    <script src="https://kit.fontawesome.com/d050a6d764.js" crossorigin="anonymous"></script>
     <style>
         body {
             text-align: center;
@@ -14,15 +17,21 @@
         #dashboard {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-evenly;
+            /* border: 1px solid rgba(0, 0, 0, 0.115); */
+            border-radius: 12px;
+            padding-top: 10px;
+            width: 100%;
+            position: relative;
+    
         }
 
         .chart-placeholder {
             margin-bottom: 20px;
-            border: 2px solid #ddd;
+            /* border: 2px solid #ddd; */
             border-radius: 10px;
             padding: 15px;
-            width: 300px;
+            width: 200px;
         }
 
         .chart-label {
@@ -36,7 +45,60 @@
         }
     </style>
 </head>
+
+
+
+
+
 <body>
+  
+
+
+  <div class="sbar ">
+    <div class="row-search ">
+        <div class="col-6">
+            <div class="input-size input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search...">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="sidebar ">
+    <!-- Dashboard -->
+      <a class="navbar btn btn-outline-primary"  href="Dboard.html">
+        <i class="icon fa-solid fa-chart-line"></i>
+      </a>
+      <br>
+      <!-- Orphan -->
+      <a class="navbar btn btn-outline-primary" href="Orphan.html">
+        <i class="icon fa-solid fa-children" ></i>
+      </a>
+      <br>
+      <!-- Files -->
+      <a class="navbar btn btn-outline-primary" href="File.html">
+        <i class="icon fa-solid fa-folder-open"></i>
+      </a>
+      <br>
+      <!-- Trash -->
+      <a class="navbar btn btn-outline-primary" href="Trash.html">
+        <i class="icon fa-solid fa-trash-can"></i>
+      </a>
+      <br>
+      <!-- Setting -->
+      <a class="navbar btn btn-outline-primary" href="Setting.html">
+        <i class="icon fa-solid fa-gears"></i>
+      </a>
+      <br>
+      <!-- Logout -->
+      <a class="navbar btn btn-outline-primary" href="Login.html">
+        <i class="icon fa-solid fa-right-from-bracket"></i>
+      </a>
+  </div>
+
+<div class="container-fluid-charts">
     <div id="dashboard-title">
         <h2>Education Dashboard</h2>
     </div>
@@ -45,39 +107,40 @@
         <!-- Chart 1: Grade Level - Bar Chart (Elementary) -->
         <div class="chart-placeholder" style="order: 1;">
             <label class="chart-label">Grade Level - Elementary</label>
-            <canvas id="gradeLevelElementaryChart" width="300" height="300"></canvas>
+            <canvas id="gradeLevelElementaryChart" width="200" height="200"></canvas>
         </div>
 
         <!-- Chart 2: Grade Level - Bar Chart (Junior High School) -->
         <div class="chart-placeholder" style="order: 2;">
             <label class="chart-label">Grade Level - Junior High School</label>
-            <canvas id="gradeLevelJuniorHighChart" width="300" height="300"></canvas>
+            <canvas id="gradeLevelJuniorHighChart" width="200" height="200"></canvas>
         </div>
 
         <!-- Chart 3: Grade Level - Bar Chart (Senior High School) -->
         <div class="chart-placeholder" style="order: 3;">
             <label class="chart-label">Grade Level - Senior High School</label>
-            <canvas id="gradeLevelSeniorHighChart" width="300" height="300"></canvas>
+            <canvas id="gradeLevelSeniorHighChart" width="200" height="200"></canvas>
         </div>
 
         <!-- Chart 4: Grades per Subject - Line Chart (Elementary) -->
         <div class="chart-placeholder" style="order: 4;">
             <label class="chart-label">Grades per Subject - Elementary</label>
-            <canvas id="gradesPerSubjectElementaryChart" width="300" height="300"></canvas>
+            <canvas id="gradesPerSubjectElementaryChart" width="200" height="200"></canvas>
         </div>
 
         <!-- Chart 5: Grades per Subject - Line Chart (Junior High School) -->
         <div class="chart-placeholder" style="order: 5;">
             <label class="chart-label">Grades per Subject - Junior High School</label>
-            <canvas id="gradesPerSubjectJuniorHighChart" width="300" height="300"></canvas>
+            <canvas id="gradesPerSubjectJuniorHighChart" width="200" height="200"></canvas>
         </div>
 
         <!-- Chart 6: Grades per Subject - Line Chart (Senior High School) -->
         <div class="chart-placeholder" style="order: 6;">
             <label class="chart-label">Grades per Subject - Senior High School</label>
-            <canvas id="gradesPerSubjectSeniorHighChart" width="300" height="300"></canvas>
+            <canvas id="gradesPerSubjectSeniorHighChart" width="200" height="200"></canvas>
         </div>
     </div>
+</div>
 
     <script>
         // Sample data (replace this with your actual data)

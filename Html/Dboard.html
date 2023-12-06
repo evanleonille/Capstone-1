@@ -67,13 +67,12 @@
   display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    position: relative;
-    width: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.115);
-    background-color:azure;
+    /* border: 1px solid rgba(0, 0, 0, 0.115); */
     border-radius: 12px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding-top: 10px;
+    width: 100%;
+    position: relative;
+    
 }
 
 .chart-placeholder {
@@ -97,31 +96,38 @@
 <!-- Chart 1: Number of Male and Female - Pie Chart -->
 <a class="chart-placeholder" style="order: 1;">
     <label class="chart-label">Gender Distribution</label>
-    <canvas id="genderChart" width="200" height="200"></canvas>
+    <canvas id="genderChart" width="230" height="200"></canvas>
 </a>
 
 <!-- Chart 2: Age - Bar Chart -->
 <div class="chart-placeholder" style="order: 2;">
     <label class="chart-label">Age Distribution</label>
-    <canvas id="ageChart" width="200" height="200"></canvas>
+    <canvas id="ageChart" width="230" height="200"></canvas>
 </div>
 
 <!-- Chart 3: Health - BMI (Bar Chart) -->
-<a href="C:\Users\user\Downloads\dashboard\health.html" class="chart-placeholder" style="order: 3;">
+<a href=".\health.html" class="chart-placeholder" style="order: 3;">
     <label class="chart-label">BMI Distribution</label>
-    <canvas id="bmiChart" width="200" height="200"></canvas>
+    <canvas id="bmiChart" width="230" height="200"></canvas>
 </a>
 
 <!-- Chart 4: Education - Performance (Line Chart) -->
-<a href="C:\Users\user\Downloads\dashboard\education.html" class="chart-placeholder" style="order: 4;">
+<a href=".\education.html" class="chart-placeholder" style="order: 4;">
     <label class="chart-label">Education Performance</label>
-    <canvas id="educationChart" width="200" height="200"></canvas>
+    <canvas id="educationChart" width="230" height="200"></canvas>
+</a>
+
+<a href=".\education.html" class="chart-placeholder" style="order: 4;">
+  <label class="chart-label">Education Performance</label>
+  <canvas id="barChart" width="230" height="200"></canvas>
+</a>
+
+<a href=".\education.html" class="chart-placeholder" style="order: 4;">
+  <label class="chart-label">Education Performance</label>
+  <canvas id="pieChart" width="230" height="200"></canvas>
 </a>
 </div>
-  <div class="container-dashboard-notif">
-    waw
-  </div>
-</div>
+  
 
 
 <script>
