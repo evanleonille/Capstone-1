@@ -161,7 +161,7 @@
   
   
               <div class="file-container">
-              <form id="deleteForm" method="POST" action="{% url 'delete_files' %}">
+              <form id="deleteForm" method="POST" action="{% url 'delete_files' %}" style="display:flex">
                 
                       <div class="file-item">
                           <div class="file-item-select-bg bg-primary"></div>
@@ -179,15 +179,28 @@
                           <!-- Rest of the file details -->
                       </div>
                   
-                     
+                      <div class="file-item">
+                          <div class="file-item-select-bg bg-primary"></div>
+                          <div class="file-item-icon fab fa-js text-secondary"></div>
+                          <a href="{% url 'serve_file' file.fileID %}" class="file-item-name" target="_blank">
+                              {{ file.fileName }}
+                          </a>
+                          <div class="file-item-changed">{{ file.fileDescription }}</div>
+                         
+                          <!-- file details... -->
+                          <label class="file-item-checkbox custom-control custom-checkbox">
+                              <input type="checkbox" name="file_ids" value="{{ file.fileID }}" class="custom-control-input" />
+                              <span class="custom-control-label"></span>
+                          </label>
+                          <!-- Rest of the file details -->
+                      </div>
                
                   <input type="submit" id="submitForm" style="display: none;">
               </form>
-    
-  
+   
       </main>
-      <!-- </div>
-      </div> -->
+      </div>
+      </div>
   
   
   {% block js %}
