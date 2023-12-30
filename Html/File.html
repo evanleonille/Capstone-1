@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../Css/Dboard.css">
+    <link rel="stylesheet" type="text/css" href="../Css/file.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/d050a6d764.js" crossorigin="anonymous"></script>
     <title>Document</title>
@@ -67,7 +67,7 @@
   {% endblock %}
   
   {% block css %}
-      <link rel="stylesheet" type="text/css" href="../Css/file.css"> 
+      <link rel="stylesheet" type="text/css" href="{% static 'Css/file.css' %}"> 
       <style>
           .modal-content {
               background-color: #f4f4f4;
@@ -96,22 +96,22 @@
               pointer-events: all;
           }
       </style>
-
+  {% endblock %}
   
   <body>
   
       <main>
-     
+      {% block content %}
   
       <!-- Rest of your HTML -->
-      
+      {% for message in messages %}
           <div class="alert alert-{{ message.tags }}">
-             
+              {{ message }}
           </div>
-     
+      {% endfor %}
           <div class="container-orphan">
           <div class="container flex-grow-1 primary-style container-p-y">
-          <div class="container-m-nx container-m-ny bg-primaryest mb-3">
+          <div class="container-m-nx container-m-ny bg-primaryest ">
       
   
   <!-- upload files Modal-->
@@ -130,7 +130,8 @@
                       </div>
                       <div class="modal-body">
                           <form method="POST" action="/files/" enctype="multipart/form-data">
-                            
+                              {% csrf_token %}
+                              {{ form.as_p }}
                               <button type="submit" class="btn btn-primary mt-3">Upload</button>
                           </form>
                       </div>
@@ -161,8 +162,9 @@
   
   
               <div class="file-container">
-              <form id="deleteForm" method="POST" action="{% url 'delete_files' %}" style="display:flex">
-                
+              <form id="deleteForm" method="POST" action="{% url 'delete_files' %}" style="display: flex">
+                  {% csrf_token %}
+                  {% for file in files %}
                       <div class="file-item">
                           <div class="file-item-select-bg bg-primary"></div>
                           <div class="file-item-icon fab fa-js text-secondary"></div>
@@ -178,29 +180,32 @@
                           </label>
                           <!-- Rest of the file details -->
                       </div>
-                  
+
                       <div class="file-item">
-                          <div class="file-item-select-bg bg-primary"></div>
-                          <div class="file-item-icon fab fa-js text-secondary"></div>
-                          <a href="{% url 'serve_file' file.fileID %}" class="file-item-name" target="_blank">
-                              {{ file.fileName }}
-                          </a>
-                          <div class="file-item-changed">{{ file.fileDescription }}</div>
-                         
-                          <!-- file details... -->
-                          <label class="file-item-checkbox custom-control custom-checkbox">
-                              <input type="checkbox" name="file_ids" value="{{ file.fileID }}" class="custom-control-input" />
-                              <span class="custom-control-label"></span>
-                          </label>
-                          <!-- Rest of the file details -->
-                      </div>
-               
+                        <div class="file-item-select-bg bg-primary"></div>
+                        <div class="file-item-icon fab fa-js text-secondary"></div>
+                        <a href="{% url 'serve_file' file.fileID %}" class="file-item-name" target="_blank">
+                            {{ file.fileName }}
+                        </a>
+                        <div class="file-item-changed">{{ file.fileDescription }}</div>
+                       
+                        <!-- file details... -->
+                        <label class="file-item-checkbox custom-control custom-checkbox">
+                            <input type="checkbox" name="file_ids" value="{{ file.fileID }}" class="custom-control-input" />
+                            <span class="custom-control-label"></span>
+                        </label>
+                        <!-- Rest of the file details -->
+                    </div>
+                  {% empty %}
+                      <p>No files found.</p>
+                  {% endfor %}
                   <input type="submit" id="submitForm" style="display: none;">
               </form>
-   
+      {% endblock %} 
+  
       </main>
-      </div>
-      </div>
+      <!-- </div>
+      </div> -->
   
   
   {% block js %}
@@ -222,6 +227,6 @@
   {% endblock %}
   
   
-
-</body>
-</html>
+  
+  </body>
+  </html>
