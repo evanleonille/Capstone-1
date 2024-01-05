@@ -122,14 +122,29 @@
           <button type="button" class="btn btn-primary mr-2" id="uploadBtn" data-bs-toggle="modal" data-bs-target="#uploadModal"><i class="ion ion-md-cloud-download"></i>&nbsp; Download</button>
           <button type="button" class="btn btn-danger mr-2" id="uploadBtn" data-bs-toggle="modal" data-bs-target="#uploadModal"><i class="ion ion-md-cloud-trash"></i>&nbsp; Delete</button>
           <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                  <div class="modal-content">
+              <div class="modal-dialog modal-lg">
+                  <div class="modal-content ">
                       <div class="modal-header">
                           <h5 class="modal-title" id="uploadModalLabel">Upload File</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <div class="modal-body">
+                      <div class="modal-body" >
+                        <div>
                           <form method="POST" action="/files/" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="FileName" class="form-label">File Name:</label>
+                                <input type="input" class="form-control" id="text" required style="border-radius: 12px;">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="FileDescr">File Description:</label>
+                                <textarea name="msg" id="comment" msg cols="30" rows="10" class="form-control" style="height: 20%;"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="FileDescr"></label>
+                                <input type="file" class="form-control-file border"> </div>
                               {% csrf_token %}
                               {{ form.as_p }}
                               <button type="submit" class="btn btn-primary mt-3">Upload</button>
