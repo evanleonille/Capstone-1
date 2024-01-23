@@ -67,11 +67,12 @@ body {
     color: #9FC3E5;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 100%;
 }
 
 .icon{
     font-size: 33px;
+    width: 100%;
 }
 
 .icon-dropdown{
